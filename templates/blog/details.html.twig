@@ -31,13 +31,13 @@
 		{% if paragraphs|length > 0 %}
 			{% for paragraph in paragraphs %}
 				<div class="container-paragraphs">
-					<h3 class="title-paragraphs">{{paragraph.title}}</h3>
-					<div>{{paragraph.content}}</div>
+					<h3 class="title-paragraphs">{{paragraph.title | raw}}</h3>
+					<div>{{paragraph.content | raw}}</div>
 					<div class="container-image-paragraphs">
 						<figure>
 							<img src="{{vich_uploader_asset(paragraph, 'imageFile')}}" alt="{{paragraph.title}}"/>
 							{% if paragraph.caption %}
-								<figcaption>{{paragraph.caption}}</figcaption>
+								<figcaption>{{paragraph.caption | raw}}</figcaption>
 							{% endif %}
 						</figure>
 					</div>
