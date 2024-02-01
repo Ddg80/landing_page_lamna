@@ -1,0 +1,278 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil - Lämna{% endblock %}
+
+{% block body %}
+	{% for message in app.flashes('success') %}
+		<div class="alert alert-success alert-dismissible fade show" role="alert">
+			{{ message }}
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+	{% endfor %}
+	<header id="section-presentation">
+		<div class="bloc-presentation">
+			<div class="bloc-presentation-h2">
+				<h2>UNE NOUVELLE VISION DU VOYAGE</h2>
+			</div>
+			<h1>Voyagez responsable tout en économisant chez les commerçant locaux</h1>
+			<p>Avec lämna, économisez tout en voyageant les yeux fermés grâce à nos itinéraires responsables. Partez à la rencontre des monuments historiques de nos régions et des commerçants de proximité français.</p>
+			<div class="btn-lamna-full button-hover-transform">
+				<a class="nav-link mx-2" href="#section-progressive-content">
+					<span class="mr-3 text-white">Partons à l’aventure !</span>
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#FFF" class="bi bi-arrow-right" viewbox="0 0 16 16">
+						<path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+					</svg>
+				</a>
+			</div>
+		</div>
+	</header>
+	{# TEASING #}
+	<section id="mobile-app-teasing">
+		<div class="block-mobile-teasing">
+			<div>
+				<img class="picture-mobiles screenDesktop" src="{{ asset('images/background/mobilesScreenXL.png') }}" alt="Vision Lämna sur desktop">
+			</div>
+			<div>
+				<img class="picture-mobiles screenMobileSM" src="{{ asset('images/mobiles/mobilesScreenSM.png') }}" alt="Vision Lämna sur les mobiles">
+			</div>
+			<div class="picture-store-disponibility screenMobileDispoXL">
+				<img src="{{asset('images/storeDisponibility.png')}}" alt="Disponibilité sur le store"/>
+			</div>
+			<div class="picture-store-disponibility screenMobileDispoSM">
+				<img src="{{asset('images/mobiles/storeDisponibilityMobile.png')}}" alt="Disponibilité sur le store sur mobile"/>
+			</div>
+		</div>
+	</section>
+	{# CONCEPT #}
+	<section class="d-flex flex-column justify-content-center align-items-center" id="section-progressive-content">
+		<div class="d-flex flex-column justify-content-center align-items-center">
+			<p class="concept">Concept</p>
+			<h2 class="text-center mt-3">Notre concept en 3 étapes</h2>
+			<p class="text-center font-size-choices mw-concept w-75">Avant de vous lancer, découvrez le fonctionnement du projet LÄMNA. Chaque étape vous rapproche du monde du voyage plus durables et local.</p>
+		</div>
+		<div class="d-flex flex-md-row flex-column m-4 mw-choice font-size-choices">
+			<div class="doublephones block-images-slides-doublephones main-concept" id="doublephones-desktop">
+				<div class="bg-green-tertiary rounded">
+					<img class="px-4 py-8" src="{{ asset('images/mobiles/doublephones1.png') }}" id="main-concept1-img" alt="Premier concept application Lämna en image">
+					<img class="px-4 py-8" src="{{ asset('images/mobiles/doublephones2.png') }}" id="main-concept2-img" alt="Deuxième concept application Lämna en image" width="400px">
+					<img class="px-4 py-8" src="{{ asset('images/mobiles/doublephones3.png') }}" id="main-concept3-img" alt="Troisième concept application Lämna en image" width="400px">
+				</div>
+				<div class="rounded-box-number">
+					<span class="number-image" id="number-image">1<span></div>
+						<div class="m-4">
+							<ul class="text-decoration-none list-unstyled h-100 d-flex flex-column justify-content-between align-items-start">
+								<li id="concept1" class="mb-4">
+									<p class="text-secondary-green fw-medium">
+										<span class="fw-bold me-2">1.</span>Choisissez votre prochaine destination
+									</p>
+									<p>Parcourez notre liste de destination et découvrez votre itinéraire ainsi que l’ensemble des points d’intérêt.</p>
+								</li>
+								<li id="concept2" class="mb-4">
+									<p class="text-secondary-green fw-medium">
+										<span class="fw-bold me-2">2.</span>Réservez votre moyen de transport responsable
+									</p>
+									<p>Choisissez le transport responsable qui vous arrange le plus : train, bus, covoiturage... et réservez vos billets.</p>
+								</li>
+								<li id="concept3">
+									<p class="text-secondary-green fw-medium">
+										<span class="fw-bold me-2">3.</span>
+										Visitez & économisez tout en faisant travailler le commerce local
+									</p>
+									<p>Profitez de réductions chez les commerçants locaux partenaires de notre application tout en respectant l’environnement grâce aux éco-transports.</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div id="doublephones-mobiles">
+						<div id="container-concepts-mobile">
+							<div id="content-concepts-mobile">
+								<div class="container-concept-image-and-text-mobile">
+									<div class="container-concept-image">
+										<img src="{{asset('images/mobiles/doublephones1.png')}}" alt="Premier concept application Lämna en image de type mobile"/>
+										<div class="rounded-box-number">
+											<span class="number-image" id="number-image">1<span></div>
+											</div>
+											<div class="content-concept-mobile">
+												<p class="title-concepts-mobile">1. Choisissez votre prochaine destination</p>
+												<p class="description-article-mobile">Parcourez notre liste de destination et découvrez votre itinéraire ainsi que l’ensemble des points d’intérêt.</p>
+											</div>
+										</div>
+										<div class="container-concept-image-and-text-mobile">
+											<div class="container-concept-image">
+												<img src="{{asset('images/mobiles/doublephones2.png')}}" alt="Deuxième concept application Lämna en image de type mobile" width="350px"/>
+												<div class="rounded-box-number">
+													<span class="number-image" id="number-image">2<span></div>
+													</div>
+													<div class="content-concept-mobile">
+														<p class="title-concepts-mobile">2. Réservez votre moyen de transport responsable</p>
+														<p class="description-article-mobile">Choisissez le transport responsable qui vous arrange le plus : train, bus, covoiturage... et réservez vos billets.</p>
+													</div>
+												</div>
+												<div class="container-concept-image-and-text-mobile">
+													<div class="container-concept-image">
+														<img src="{{asset('images/mobiles/doublephones1.png')}}" alt="Troisième concept application Lämna en image de type mobile" width="350px"/>
+														<div class="rounded-box-number">
+															<span class="number-image" id="number-image">3<span></div>
+															</div>
+															<div class="content-concept-mobile">
+																<p class="title-concepts-mobile text-secondary-green fw-medium">3. Visitez & économisez tout en faisant travailler le commerce local</p>
+																<p class="description-article-mobile">Profitez de réductions chez les commerçants locaux partenaires de notre application tout en respectant l’environnement grâce aux éco-transports.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+												{% if posts|length > 1 %}
+													<div class="btns-doublephones-mobile">
+														<div class="btn-left" id="slideBack-concepts-mobile">
+															<img src="{{asset('images/icons/arrow-left.png')}}" alt="Icon qui permet de se déplacer vers la gauche"/>
+														</div>
+														<div class="btn-right" id="slide-concepts-mobile">
+															<img src="{{asset('images/icons/arrow-right.png')}}" alt="Icon qui permet de se déplacer vers la droite"/>
+														</div>
+													</div>
+												{% endif %}
+											</div>
+										</section>
+										{# STATS #}
+										<section class="bg-green-tertiary d-flex justify-content-center p-data">
+											<div class="d-flex flex-column justify-content-center align-items-start mw-data m-4">
+												<div class="d-flex flex-column justify-content-start align-items-start pb-3">
+													<p class="concept mb-4">
+														Chiffres clés
+													</p>
+													<div class="mw-interesting">
+														<h2 class="text-left">
+															Quelques données intéressantes
+														</h2>
+														<p class="text-left">
+															Urna nisl facilisis diam sollicitudin purus in. Sed quisque phasellus nulla augue non sed proin amet. Cursus mauris malesuada felis integer parturient gravida scelerisque pellentesque.
+														</p>
+													</div>
+												</div>
+												<div class="d-flex flex-column flex-md-row">
+													<div class="bg-light card">
+														<h3 class="header-percentage">11 %</h3>
+														<p>des émissions de gaz à effet de serre en France sont générées par le tourisme</p>
+														<p class="text-muted mt-3">Source :  Les Echos</p>
+													</div>
+													<div class="bg-light card">
+														<h3 class="header-percentage">77 %</h3>
+														<p>des ces émissions proviennent des transports</p>
+														<p class="text-muted mt-3">Source : Ademe</p>
+													</div>
+													<div class="bg-light card">
+														<h3 class="header-percentage">2 %</h3>
+														<p>des emplois en France sont issus des petits commerces</p>
+														<p class="text-muted mt-3">Source : Cairn.info</p>
+													</div>
+												</div>
+											</div>
+										</section>
+										{# BLOG #}
+										<section class="section-blog">
+											<p class="concept">Blog</p>
+											<h2 class="title-blog">L’actualité du côté de lämna</h2>
+											<p class="text-section-blog">Découvrez le monde du voyage éco-responsable avec le blog lämna. Astuces, destinations durables, et trésors locaux vous attendent pour une exploration responsable et enrichissante.</p>
+											<div id="container">
+												<div id="content" class="screenDesktopForSlides">
+													{% if posts %}
+														{% for post in posts %}
+															<div class="article">
+																<div class="card-image"><img src="{{vich_uploader_asset(post, 'imageFile')}}"  alt="{{post.title}}" width="300px"/></div>
+																<div class="content-article">
+																	<div
+																		class="box-label-and-date">
+																		{# Relation class many to many #}
+																		{% for category in post.categories %}
+																			<span class="concept">{{category.name}}</span>
+																		{% endfor %}
+																		<span class="date-card-article">{{post.createdAt |format_datetime('short', 'none', locale='fr')}}</span>
+																	</div>
+																	<div class="description-article">{{post.title}}
+																	</div>
+																	<a class="nav-link" href="{{ path('blog_details_article', {slug: post.slug, id: post.id}) }}">Lire l'article
+																		<span>
+																			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewbox="0 0 16 16">
+																				<path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+																			</svg>
+																		</span>
+																	</a>
+																</div>
+															</div>
+														{% endfor %}
+													{% else %}
+														{% include "partials/notArticle.html.twig" %}
+													{% endif %}
+
+												</div>
+											</div>
+											<div class="actions-slider screenMobileSM">
+												<div class="btn-left" id="slideBack">
+													<img src="{{asset('images/icons/arrow-left.png')}}" alt="Icon qui permet de se déplacer vers la gauche"/>
+												</div>
+												<div class="btn-right" id="slide">
+													<img src="{{asset('images/icons/arrow-right.png')}}" alt="Icon qui permet de se déplacer vers la droite"/>
+												</div>
+											</div>
+											{% if posts|length > 1 %}
+												<div class="btn-lamna-full mt-3 button-hover-transform">
+												<a class="nav-link mx-2" href="{{path("blog_all_articles", {'filter' : 'Tous'})}}">
+													<span class="mr-3 text-white">Voir tous les articles</span>
+													<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#FFF" class="bi bi-arrow-right" viewbox="0 0 16 16">
+														<path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+													</svg>
+												</a>
+											</div>
+											{% endif %}
+										</div>
+									</section>
+									{# NEWSLETTER #}
+									<section class="bg-green-tertiary d-flex justify-content-center" id="newsletter">
+										<div class="mw-sub d-flex flex flex-md-row flex-column mt-5">
+											<div class="d-flex flex-column justify-content-center align-items-start mw-data m-4">
+												<div class="d-flex flex-column justify-content-start align-items-start pb-3">
+													<div class="alert alert-success alert-dismissible fade show" role="alert" id="message-alert">
+														<strong>Bravo!</strong>
+														Votre email a bien été enregistré.
+														<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+													</div>
+													<p class="concept mb-4">
+														Newsletter
+													</p>
+													<h2>
+														Inscrivez-vous pour découvrir nos premiers itinéraires et bénéficier d’offres spéciales !
+													</h2>
+													<p>
+														L’aventure LÄMNA ne fait que commencer et il ne faudrait pas louper la suite !<br/>Rejoignez notre newsletters pour suivre l’aventure, des nouvelles vous seront<br/>
+														données très rapidement.
+													</p>
+
+													{% include "home/_form_email.html.twig" %}
+												</div>
+											</div>
+											<div class="d-flex flex-row justify-content-center image-newsletter">
+												<img src="{{ asset('images/background/guy.png') }}" alt="Présentation du concept">
+												<div class="box-links-newsletter">
+													<p>Nous suivre !</p>
+													<ul class="links-newsletter">
+														<li class="link-newsletter">
+															<a class="nav-link mx-2 active" aria-current="page" href="https://www.tiktok.com/@lamna_app" target="_blank">
+																<img src="{{asset("images/icons/ic_outline-tiktok.png")}}" alt="Logo tiktok réseau social tiktok"/>
+															</a>
+														</li>
+														<li class="link-newsletter">
+															<a class="nav-link mx-2 active" aria-current="page" href="https://www.instagram.com/lamna_app" target="_blank">
+																<img src="{{asset("images/icons/mdi_instagram.png")}}" alt="Logo instagram réseau social instagram"/>
+															</a>
+														</li>
+														<li class="link-newsletter">
+															<a class="nav-link mx-2 active" aria-current="page" href="https://www.linkedin.com/company/lämna/" target="_blank">
+																<img src="{{asset("images/icons/mdi_linkedin.png")}}" alt="Logo linkedin réseau social linkedin"/>
+															</a>
+
+														</li>
+													</ul>
+													<div></div>
+												</div>
+											</section>
+										{% endblock %}

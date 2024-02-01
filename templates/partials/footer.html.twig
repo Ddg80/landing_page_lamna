@@ -1,0 +1,53 @@
+<footer class="bg-green-secondary text-light d-flex flex-column justify-content-center align-items-center">
+
+	<div class="d-flex flex-row m-4 justify-content-center align-items-center">
+		<img src="{{ asset('images/logos/lamna-icon.png') }}" alt="" class="mr-2 pr-2">
+		<h2 class="pt-4 ps-2">LÄMNA</h2>
+	</div>
+
+	<div class="w-100">
+		<div class="d-flex flex-row justify-content-end align-items-end w-full me-4">
+			<img src="{{ asset('images/logos/arrow_up.png') }}" alt="" onclick="console.log(window.scrollTo(0,0))">
+		</div>
+	</div>
+
+	<ul class="text-decoration-none list-unstyled d-flex flex-column flex-md-row flex-justify-center flex-align-center text-center">
+		<li class="mx-4">
+			<a class="text-decoration-none text-light" href="">Mentions légales</a>
+		</li>
+		<li class="mx-4">
+			<a class="text-decoration-none text-light" href="">Politique de confidentialité</a>
+		</li>
+		<li class="mx-4">
+			<a class="text-decoration-none text-light" href="">Préférences de confidentialité</a>
+		</li>
+	</ul>
+
+	<div class="bg-light w-75 separator mb-4 mt-4"></div>
+
+	<div class="d-flex justify-content-center align-items-center">
+		<ul class="text-decoration-none list-unstyled d-flex flex-row flex-justify-center flex-align-center w-full">
+			<li class="m-1">
+				<a class="nav-link mx-2 active" aria-current="page" href="https://www.tiktok.com/@lamna_app" target="_blank">
+					<img src="{{ asset('images/logos/ic_outline-tiktok.png') }}" alt="Lien réseau tiktok">
+				</a>
+			</li>
+			<li class="m-1">
+				<a class="nav-link mx-2" href="https://www.instagram.com/lamna_app" target="_blank">
+					<img src="{{ asset('images/logos/mdi_instagram.png') }}" alt="Lien réseau instagram">
+				</a>
+			</li>
+			<li class="m-1">
+				<a class="nav-link mx-2" href="https://www.linkedin.com/company/lämna/" target="_blank">
+					<img src="{{ asset('images/logos/mdi_linkedin.png') }}" alt="Lien réseau linkedin">
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="d-flex justify-content-center align-items-center mb-4">
+        <p><span class="link-administrator"><a href="{{path('admin_index')}}">© 2022 lämna</a></span>
+          <span class="m-2">|</span>
+          Tous droits réservés</p>
+	</div>
+
+</footer>
