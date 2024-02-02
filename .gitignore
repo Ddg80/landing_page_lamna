@@ -5,6 +5,8 @@
 /public/bundles/
 /var/
 /vendor/
+migrations/
+public/uploads/attachments/
 ###< symfony/framework-bundle ###
 
 ###> phpunit/phpunit ###
