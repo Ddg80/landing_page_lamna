@@ -907,7 +907,7 @@ figcaption{
 
 
 .rights{
-  height: max-content;
+  min-height: 100vh;
   width: 70%;
   display: flex;
   flex-direction: column;
