@@ -40,7 +40,7 @@ class PostCrudController extends AbstractCrudController
         return [
             TextField::new('title'),
             SlugField::new('slug')->setTargetFieldName('title'),
-            TextareaField::new('content'),
+            TextEditorField::new('content'),
             TextField::new('imageFile')->setFormType(VichImageType::class),
             ImageField::new('ImageName')->setBasePath('/uploads/attachments')->onlyOnIndex(),
             AssociationField::new('categories'),

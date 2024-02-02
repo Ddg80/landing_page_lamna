@@ -63,7 +63,6 @@ html {
 
 .card-image img {
   max-width: 400px;
-  max-height: 200px;
   border-radius: 10px;
 }
 
@@ -350,6 +349,7 @@ body {
 /* ARTICLE */
 .article {
   max-width: 450px;
+  width: 450px;
   max-height: max-content;
 }
 .content-article {
@@ -361,6 +361,7 @@ body {
 .description-article {
   width: 95%;
   white-space: pre-wrap;
+  margin-top: 10px;
 }
 
 .box-label-and-date {
@@ -902,4 +903,18 @@ figcaption{
   .description-blog-details{
     font-size: 14px;
   }
+}
+
+
+.rights{
+  height: max-content;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin: 20px auto;
+}
+
+.rights h2, h3, h1, h4{
+  margin: 10px 0;
 }

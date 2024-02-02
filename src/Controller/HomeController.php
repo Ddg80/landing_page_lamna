@@ -50,4 +50,22 @@ class HomeController extends AbstractController
             'posts' => $posts
         ]);
     }
+
+    #[Route('/accessibility', name: 'accessibility')]
+    public function accessibility()
+    {
+        return $this->render('rights/accessibility.html.twig');
+    }
+
+    #[Route('/mentions-legales', name: 'mentions-legales')]
+    public function mentions()
+    {
+        return $this->render('rights/mentions.html.twig');
+    }
+
+    #[Route('/politique-confidentialite', name: 'politique-confidentialite')]
+    public function politique()
+    {
+        return $this->render('rights/politique.html.twig');
+    }
 }

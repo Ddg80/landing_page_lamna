@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ post.slug }}{% endblock %}
+{% block title %}{{ post.title}} | LÄMNA{% endblock %}
 
 {% block body %}
 	<header class="header-blog-details">
@@ -28,16 +28,16 @@
 		{% if paragraphs|length > 0 %}
 			{% for paragraph in paragraphs %}
 				<div class="container-paragraphs">
-					<h3 class="title-paragraphs">{{paragraph.title | raw}}</h3>
+					<h2 class="title-paragraphs">{{paragraph.title | raw}}</h2>
 					<div>{{paragraph.content | raw}}</div>
-					<div class="container-image-paragraphs">
+					{% if paragraph.caption is not empty and paragraph.imageName is not empty %}
+						<div class="container-image-paragraphs">
 						<figure>
 							<img src="{{vich_uploader_asset(paragraph, 'imageFile')}}" alt="{{paragraph.title}}"/>
-							{% if paragraph.caption %}
 								<figcaption>{{paragraph.caption | raw}}</figcaption>
-							{% endif %}
 						</figure>
 					</div>
+					{% endif %}
 				</div>	
 			{% endfor %}
 		{% else %}
