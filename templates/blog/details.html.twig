@@ -52,48 +52,6 @@
 		<p class="concept">Articles liés</p>
 		<h2 class="title-blog-details">Ces articles pourraient vous intéresser</h2>
 		<p class="text-section-blog-details">Urna nisl facilisis diam sollicitudin purus in. Sed quisque phasellus nulla augue non sed proin amet. Cursus mauris malesuada felis integer parturient gravida scelerisque pellentesque.</p>
-		<div id="container-blog-details">
-			<div id="content-blog-details" class="screenDesktopForSlidesDetails">
-				{% if posts %}
-					{% for post in posts %}
-						<div class="article">
-							<div class="card-image"><img src="{{asset("images/articles/post_featured_images/#{post.getFeaturedImage()}")}}" alt="{{post.title}}" width="300px"/></div>
-							<div class="content-article">
-								<div
-									class="box-label-and-date">
-									{# Relation class many to many #}
-									{% for category in post.categories %}
-										<span class="concept">{{category.name}}</span>
-									{% endfor %}
-									<span class="date-card-article">{{post.createdAt |format_datetime('short', 'none', locale='fr')}}</span>
-								</div>
-								<div class="description-article">{{post.title}}
-								</div>
-								<a class="nav-link" href="{{ path('blog_details_article', {slug: post.slug, id: post.id}) }}">Lire l'article
-									<span>
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewbox="0 0 16 16">
-											<path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-										</svg>
-									</span>
-								</a>
-							</div>
-						</div>
-					{% endfor %}
-				{% else %}
-					{% include "partials/notArticle.html.twig" %}
-				{% endif %}
-
-			</div>
-		</div>
-		{% if posts|length > 1 %}
-			<div class="actions-slider-blog-details screenMobileSM">
-				<div class="btn-left-blog-details" id="slideBack-details">
-					<img src="{{asset('images/icons/arrow-left.png')}}" alt="Icon qui permet de se déplacer vers la gauche"/>
-				</div>
-				<div class="btn-right-blog-details" id="slide-details">
-					<img src="{{asset('images/icons/arrow-right.png')}}" alt="Icon qui permet de se déplacer vers la droite"/>
-				</div>
-			</div>
-		{% endif %}
+		{% include "partials/cardsArticle.html.twig" %}
 	</div>
 </section>{% endblock %}

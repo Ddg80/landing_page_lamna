@@ -41,7 +41,9 @@ class HomeController extends AbstractController
 
         // 3 last articles
         $postRepository = $entityManagerInterface->getRepository(Post::class);
-        $posts = $postRepository->findBy([],['id' => 'DESC'], 3);
+        $posts = $postRepository->hydratedFindOnly3Posts();
+
+        // dd($posts);
 
         return $this->render('home/index.html.twig', [
             'addresseEmailForm' => $addresseEmailForm->createView(),

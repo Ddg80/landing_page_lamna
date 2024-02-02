@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Post;
 use App\Entity\Categorie;
+use Doctrine\ORM\Query\Expr\Join;
 use Doctrine\Persistence\ManagerRegistry;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
@@ -30,6 +31,31 @@ class PostRepository extends ServiceEntityRepository
             ->setParameter('categoryId',$category->getId())
             ->getQuery()
             ->getResult()
+        ;
+    }
+
+    public function hydrateFindAll()
+    {
+        $qb   = $this->createQueryBuilder('p');
+
+        $qb->addSelect('p','c','u')
+            ->innerJoin('p.categories', 'c')
+            ->innerJoin('p.author', 'u')
+        ;
+        $resultArray = $qb->getQuery()->getResult(\Doctrine\ORM\Query::HYDRATE_ARRAY);
+        return $resultArray;
+    }
+
+    public function hydratedFindOnly3Posts(int $limit = 3, $orderBy = 'DESC')
+    {
+        return $this->createQueryBuilder('p')
+            ->addSelect('p','c','u')
+            ->innerJoin('p.categories', 'c')
+            ->innerJoin('p.author', 'u')
+            ->setFirstResult(0)
+            ->setMaxResults($limit)
+            ->orderBy('p.id', $orderBy)
+            ->getQuery()->getResult()
         ;
     }
 
