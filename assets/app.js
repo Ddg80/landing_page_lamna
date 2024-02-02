@@ -297,4 +297,3 @@ if (backConcepts !== null) {
     });
   });
 }
-

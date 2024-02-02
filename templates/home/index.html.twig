@@ -1,6 +1,7 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Accueil - Lämna{% endblock %}
+{% block title %}LÄMNA - Une nouvelle vision du vision
+{% endblock %}
 
 {% block body %}
 	{% for message in app.flashes('success') %}
@@ -13,7 +14,7 @@
 		<div class="bloc-presentation">
 			<p class="concept">Une nouvelle vision du vision</p>
 			<h1>Voyagez responsable tout en économisant chez les commerçant locaux</h1>
-			<p>Avec lämna, économisez tout en voyageant les yeux fermés grâce à nos itinéraires responsables. Partez à la rencontre des monuments historiques de nos régions et des commerçants de proximité français.</p>
+			<p class="para-bloc-presentation">Avec lämna, économisez tout en voyageant les yeux fermés grâce à nos itinéraires responsables. Partez à la rencontre des monuments historiques de nos régions et des commerçants de proximité français.</p>
 			<div class="btn-lamna-full button-hover-transform">
 				<a class="nav-link mx-2" href="#section-progressive-content">
 					<span class="mr-3 text-white">Partons à l’aventure !</span>
@@ -48,7 +49,7 @@
 			<h2 class="text-center mt-3">Notre concept en 3 étapes</h2>
 			<p class="text-center font-size-choices mw-concept w-75">Avant de vous lancer, découvrez le fonctionnement du projet LÄMNA. Chaque étape vous rapproche du monde du voyage plus durables et local.</p>
 		</div>
-		<div class="d-flex flex-md-row flex-column m-4 mw-choice font-size-choices">
+		<div>
 			<div class="doublephones block-images-slides-doublephones main-concept" id="doublephones-desktop">
 				<div class="bg-green-tertiary rounded">
 					<img class="px-4 py-8" src="{{ asset('images/mobiles/doublephones1.png') }}" id="main-concept1-img" alt="Premier concept application Lämna en image">
@@ -119,7 +120,7 @@
 														</div>
 													</div>
 												</div>
-												{% if posts|length > 1 %}
+												{% if posts|length > 0 %}
 													<div class="btns-doublephones-mobile">
 														<div class="btn-left" id="slideBack-concepts-mobile">
 															<img src="{{asset('images/icons/arrow-left.png')}}" alt="Icon qui permet de se déplacer vers la gauche"/>
@@ -130,107 +131,109 @@
 													</div>
 												{% endif %}
 											</div>
-										</section>
-										{# STATS #}
-										<section class="bg-green-tertiary d-flex justify-content-center p-data">
-											<div class="d-flex flex-column justify-content-center align-items-start mw-data m-4">
-												<div class="d-flex flex-column justify-content-start align-items-start pb-3">
-													<p class="concept mb-4">
-														Chiffres clés
-													</p>
-													<div class="mw-interesting">
-														<h2 class="text-left">
-															Quelques données intéressantes
-														</h2>
-														<p class="text-left">
-															Urna nisl facilisis diam sollicitudin purus in. Sed quisque phasellus nulla augue non sed proin amet. Cursus mauris malesuada felis integer parturient gravida scelerisque pellentesque.
-														</p>
-													</div>
-												</div>
-												<div class="d-flex flex-column flex-md-row">
-													<div class="bg-light card">
-														<h3 class="header-percentage">11 %</h3>
-														<p>des émissions de gaz à effet de serre en France sont générées par le tourisme</p>
-														<p class="text-muted mt-3">Source :  Les Echos</p>
-													</div>
-													<div class="bg-light card">
-														<h3 class="header-percentage">77 %</h3>
-														<p>des ces émissions proviennent des transports</p>
-														<p class="text-muted mt-3">Source : Ademe</p>
-													</div>
-													<div class="bg-light card">
-														<h3 class="header-percentage">2 %</h3>
-														<p>des emplois en France sont issus des petits commerces</p>
-														<p class="text-muted mt-3">Source : Cairn.info</p>
-													</div>
-												</div>
+										</div>
+									</div>
+								</section>
+								{# STATS #}
+								<section class="bg-green-tertiary d-flex justify-content-center p-data">
+									<div class="d-flex flex-column justify-content-center align-items-start mw-data m-4">
+										<div class="d-flex flex-column justify-content-start align-items-start pb-3">
+											<p class="concept mb-4">
+												Chiffres clés
+											</p>
+											<div class="mw-interesting">
+												<h2 class="text-left">
+													Quelques données intéressantes
+												</h2>
+												<p class="text-left">
+													Aujourd'hui, nous sommes confrontés à de véritables enjeux liés à la pollution lors de nos voyages, particulièrement dus aux moyens de transport ainsi qu'à la consommation du commerce local.
+												</p>
 											</div>
-										</section>
-										{# BLOG #}
-										<section class="section-blog">
-											<p class="concept">Blog</p>
-											<h2 class="title-blog">L’actualité du côté de lämna</h2>
-											<p class="text-section-blog">Découvrez le monde du voyage éco-responsable avec le blog lämna. Astuces, destinations durables, et trésors locaux vous attendent pour une exploration responsable et enrichissante.</p>
-											{% include "partials/cardsArticle.html.twig" %}
-											{% if posts|length > 0 %}
-												<div class="btn-lamna-full mt-3 button-hover-transform">
-												<a class="nav-link mx-2" href="{{path("blog_all_articles", {'filter' : 'Tous'})}}">
-													<span class="mr-3 text-white">Voir tous les articles</span>
-													<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#FFF" class="bi bi-arrow-right" viewbox="0 0 16 16">
-														<path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-													</svg>
-												</a>
+										</div>
+										<div class="d-flex flex-column flex-md-row">
+											<div class="bg-light card">
+												<h3 class="header-percentage">11 %</h3>
+												<p>des émissions de gaz à effet de serre en France sont générées par le tourisme</p>
+												<p class="text-muted mt-3">Source :  Les Echos</p>
 											</div>
-											{% endif %}
+											<div class="bg-light card">
+												<h3 class="header-percentage">77 %</h3>
+												<p>des ces émissions proviennent des transports</p>
+												<p class="text-muted mt-3">Source : Ademe</p>
+											</div>
+											<div class="bg-light card">
+												<h3 class="header-percentage">2 %</h3>
+												<p>des emplois en France sont issus des petits commerces</p>
+												<p class="text-muted mt-3">Source : Cairn.info</p>
+											</div>
+										</div>
+									</div>
+								</section>
+								{# BLOG #}
+								<section class="section-blog">
+									<p class="concept">Blog</p>
+									<h2 class="title-blog">L’actualité du côté de lämna</h2>
+									<p class="text-section-blog">Découvrez le monde du voyage éco-responsable avec le blog lämna. Astuces, destinations durables, et trésors locaux vous attendent pour une exploration responsable et enrichissante.</p>
+									{% include "partials/cardsArticle.html.twig" %}
+									{% if posts|length > 0 %}
+										<div class="btn-lamna-full mt-3 button-hover-transform">
+											<a class="nav-link mx-2" href="{{path("blog_all_articles", {'filter' : 'Tous'})}}">
+												<span class="mr-3 text-white">Voir tous les articles</span>
+												<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#FFF" class="bi bi-arrow-right" viewbox="0 0 16 16">
+													<path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+												</svg>
+											</a>
+										</div>
+									{% endif %}
+								</div>
+							</section>
+							{# NEWSLETTER #}
+							<section class="bg-green-tertiary d-flex justify-content-center" id="newsletter">
+								<div class="mw-sub d-flex flex flex-md-row flex-column mt-5">
+									<div class="d-flex flex-column justify-content-center align-items-start mw-data m-4">
+										<div class="d-flex flex-column justify-content-start align-items-start pb-3">
+											<div class="alert alert-success alert-dismissible fade show" role="alert" id="message-alert">
+												<strong>Bravo!</strong>
+												Votre email a bien été enregistré.
+												<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+											</div>
+											<p class="concept mb-4">
+												Newsletter
+											</p>
+											<h2>
+												Inscrivez-vous pour découvrir nos premiers itinéraires et bénéficier d’offres spéciales !
+											</h2>
+											<p>
+												L’aventure LÄMNA ne fait que commencer et il ne faudrait pas louper la suite !<br/>Rejoignez notre newsletters pour suivre l’aventure, des nouvelles vous seront<br/>
+												données très rapidement.
+											</p>
+
+											{% include "home/_form_email.html.twig" %}
+										</div>
+									</div>
+									<div class="d-flex flex-row justify-content-center image-newsletter">
+										<img src="{{ asset('images/background/guy.png') }}" alt="Présentation du concept">
+										<div class="box-links-newsletter">
+											<p>Nous suivre !</p>
+											<ul class="links-newsletter">
+												<li class="link-newsletter">
+													<a class="nav-link mx-2 active" aria-current="page" href="https://www.tiktok.com/@lamna_app" target="_blank">
+														<img src="{{asset("images/icons/ic_outline-tiktok.png")}}" alt="Logo tiktok réseau social tiktok"/>
+													</a>
+												</li>
+												<li class="link-newsletter">
+													<a class="nav-link mx-2 active" aria-current="page" href="https://www.instagram.com/lamna_app" target="_blank">
+														<img src="{{asset("images/icons/mdi_instagram.png")}}" alt="Logo instagram réseau social instagram"/>
+													</a>
+												</li>
+												<li class="link-newsletter">
+													<a class="nav-link mx-2 active" aria-current="page" href="https://www.linkedin.com/company/lämna/" target="_blank">
+														<img src="{{asset("images/icons/mdi_linkedin.png")}}" alt="Logo linkedin réseau social linkedin"/>
+													</a>
+
+												</li>
+											</ul>
+											<div></div>
 										</div>
 									</section>
-									{# NEWSLETTER #}
-									<section class="bg-green-tertiary d-flex justify-content-center" id="newsletter">
-										<div class="mw-sub d-flex flex flex-md-row flex-column mt-5">
-											<div class="d-flex flex-column justify-content-center align-items-start mw-data m-4">
-												<div class="d-flex flex-column justify-content-start align-items-start pb-3">
-													<div class="alert alert-success alert-dismissible fade show" role="alert" id="message-alert">
-														<strong>Bravo!</strong>
-														Votre email a bien été enregistré.
-														<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-													</div>
-													<p class="concept mb-4">
-														Newsletter
-													</p>
-													<h2>
-														Inscrivez-vous pour découvrir nos premiers itinéraires et bénéficier d’offres spéciales !
-													</h2>
-													<p>
-														L’aventure LÄMNA ne fait que commencer et il ne faudrait pas louper la suite !<br/>Rejoignez notre newsletters pour suivre l’aventure, des nouvelles vous seront<br/>
-														données très rapidement.
-													</p>
-
-													{% include "home/_form_email.html.twig" %}
-												</div>
-											</div>
-											<div class="d-flex flex-row justify-content-center image-newsletter">
-												<img src="{{ asset('images/background/guy.png') }}" alt="Présentation du concept">
-												<div class="box-links-newsletter">
-													<p>Nous suivre !</p>
-													<ul class="links-newsletter">
-														<li class="link-newsletter">
-															<a class="nav-link mx-2 active" aria-current="page" href="https://www.tiktok.com/@lamna_app" target="_blank">
-																<img src="{{asset("images/icons/ic_outline-tiktok.png")}}" alt="Logo tiktok réseau social tiktok"/>
-															</a>
-														</li>
-														<li class="link-newsletter">
-															<a class="nav-link mx-2 active" aria-current="page" href="https://www.instagram.com/lamna_app" target="_blank">
-																<img src="{{asset("images/icons/mdi_instagram.png")}}" alt="Logo instagram réseau social instagram"/>
-															</a>
-														</li>
-														<li class="link-newsletter">
-															<a class="nav-link mx-2 active" aria-current="page" href="https://www.linkedin.com/company/lämna/" target="_blank">
-																<img src="{{asset("images/icons/mdi_linkedin.png")}}" alt="Logo linkedin réseau social linkedin"/>
-															</a>
-
-														</li>
-													</ul>
-													<div></div>
-												</div>
-											</section>
-										{% endblock %}
+								{% endblock %}

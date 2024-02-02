@@ -40,7 +40,7 @@ class BlogController extends AbstractController
             $category = $category->findOneBy(['name' => $filter]);
             $posts = $postRepository->findByCategory($category);
         }   else {
-            $posts = $postRepository->findAll();
+            $posts = $postRepository->hydratedFindOnly3Posts();
         }
         return $this->render('blog/index.html.twig', [
             'filters' => $filters,

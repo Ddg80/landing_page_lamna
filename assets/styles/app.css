@@ -283,6 +283,19 @@ body {
 }
 
 
+.para-bloc-presentation {
+  width: 68%;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  color: var(--secondary-black-color);
+  text-align: center;
+  font-family: "ClashDisplay-Variable";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
 /* --------------------------------------MOBILES SECTIONS TEASING---------------------------------------------- */
 #mobile-app-teasing {
   width: 100%;
@@ -400,6 +413,7 @@ body {
 
 .block-images-slides-doublephones {
   position: relative;
+  margin-bottom: 20px;
 }
 
 .number-image {
@@ -423,6 +437,7 @@ body {
 
 #doublephones-mobiles {
   display: none;
+
 }
 
 #container-concepts-mobile {
@@ -449,7 +464,7 @@ body {
 
 .container-concept-image-and-text-mobile {
   max-width: 350px;
-  max-height: max-content;
+  max-height: min-content;
 }
 .container-concept-image {
   background-color: var(--tertiary-green-color);
@@ -479,6 +494,7 @@ body {
   width: 100%;
   min-height: 50px;
   padding: 0;
+  margin-bottom: 15px;
 }
 
 /* ------------------------------ BLOG PAGE  ----------------------------*/

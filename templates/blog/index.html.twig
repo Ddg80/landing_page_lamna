@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Blog - Lämna{% endblock %}
+{% block title %}LÄMNA - L’actualité du côté de LÄMNA{% endblock %}
 
 {% block body %}
 	<header class="header-blog">
@@ -38,10 +38,7 @@
 								<div class="content-article">
 									<div
 										class="box-label-and-date">
-										{# Relation class many to many #}
-										{% for category in post.categories %}
-											<span class="concept">{{category.name}}</span>
-										{% endfor %}
+										<span class="concept">{{post.categories.name}}</span>
 										<span class="date-card-article">{{post.createdAt |format_datetime('short', 'none', locale='fr')}}</span>
 									</div>
 									<div class="description-article">{{post.title}}
