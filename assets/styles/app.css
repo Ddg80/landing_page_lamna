@@ -903,6 +903,11 @@ figcaption{
   .description-blog-details{
     font-size: 14px;
   }
+
+  .shop-block{
+    flex-direction: column;
+  }
+
 }
 
 
@@ -917,4 +922,37 @@ figcaption{
 
 .rights h2, h3, h1, h4{
   margin: 10px 0;
+}
+
+
+/* SHOP SECTION */
+
+#section-shop{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.shop-block{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: var(--tertiary-green-color);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 40px 0 100px 0;
+}
+
+.shop-image{
+  width: 40%;
+}
+
+.shop-image img{
+  width: 100%;
+}
+
+.shop-content {
+  width: 50%;
 }
