@@ -911,8 +911,7 @@ figcaption{
 }
 
 
-.rights{
-  min-height: 100vh;
+.rights{  
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -955,4 +954,23 @@ figcaption{
 
 .shop-content {
   width: 50%;
+}
+
+.not-found{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
 }
