@@ -405,6 +405,7 @@ body {
 /*_________________________________________ NEWSLETTER____________________________________________ */
 .image-newsletter {
   position: relative;
+
 }
 
 .box-links-newsletter {
@@ -842,6 +843,12 @@ footer {
   .links-networks {
     display: flex;
     justify-content: center;
+  }
+
+  .image-newsletter {
+    height: auto;
+    width: 100%;
+    
   }
   
 
