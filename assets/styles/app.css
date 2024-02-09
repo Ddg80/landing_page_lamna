@@ -775,6 +775,18 @@ footer {
   margin-top: auto;
 }
 
+.newsletter-block{
+  background: var(--tertiary-green-color);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 20px 0px 20px;
+}
+
+.content-newsletter {
+  max-width: 50%;
+}
 
 
 /* ------------------------- MOBILE --------------------------- */
@@ -819,6 +831,11 @@ footer {
   p{
     font-size: var(--desktop-font-p);
     font-family: 'Inter-Regular'!important;
+  }
+
+  /* form */
+  .form-addresse-mail{
+    flex-direction: column;
   }
 
   /* Navigation */
@@ -1034,6 +1051,14 @@ footer {
   }
   .shop-content h2 {
     text-align: center;
+  }
+
+  .concept {
+    text-align: center;
+  }
+
+  .content-newsletter {
+    max-width: 100%;
   }
 }
 

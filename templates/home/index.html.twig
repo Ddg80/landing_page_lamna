@@ -212,28 +212,25 @@
 								</div>
 							</section>
 							{# NEWSLETTER #}
-							<section class="bg-green-tertiary d-flex justify-content-center" id="newsletter">
-								<div class="mw-sub d-flex flex flex-md-row flex-column mt-5">
-									<div class="d-flex flex-column justify-content-center align-items-start mw-data m-4">
-										<div class="d-flex flex-column justify-content-start align-items-start pb-3">
-											<div class="alert alert-success alert-dismissible fade show" role="alert" id="message-alert">
-												<strong>Bravo!</strong>
-												Votre email a bien été enregistré.
-												<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-											</div>
-											<p class="concept mb-4">
-												Newsletter
-											</p>
-											<h2>
-												Inscrivez-vous pour découvrir nos premiers itinéraires et bénéficier d’offres spéciales !
-											</h2>
-											<p>
-												L’aventure LÄMNA ne fait que commencer et il ne faudrait pas louper la suite !<br/>Rejoignez notre newsletters pour suivre l’aventure, des nouvelles vous seront<br/>
-												données très rapidement.
-											</p>
-
-											{% include "home/_form_email.html.twig" %}
+							<section id="newsletter">
+								<div class="newsletter-block">
+									<div class="content-newsletter">
+										<div class="alert alert-success alert-dismissible fade show" role="alert" id="message-alert">
+											<strong>Bravo!</strong>
+											Votre email a bien été enregistré.
+											<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 										</div>
+										<p class="concept mb-4">
+											Newsletter
+										</p>
+										<h2>
+											Inscrivez-vous pour découvrir nos premiers itinéraires et bénéficier d’offres spéciales !
+										</h2>
+										<p>
+											L’aventure LÄMNA ne fait que commencer et il ne faudrait pas louper la suite !<br/>Rejoignez notre newsletters pour suivre l’aventure, des nouvelles vous seront<br/>
+											données très rapidement.
+										</p>
+										{% include "home/_form_email.html.twig" %}
 									</div>
 									<div class="d-flex flex-row justify-content-center image-newsletter">
 										<img src="{{ asset('images/background/guy.png') }}" alt="Présentation du concept">
@@ -257,7 +254,8 @@
 
 												</li>
 											</ul>
-											<div></div>
 										</div>
-									</section>
-								{% endblock %}
+									</div>
+								</div>
+							</section>
+						{% endblock %}
