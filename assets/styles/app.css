@@ -1027,6 +1027,13 @@ footer {
 
   .shop-content{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .shop-content h2 {
+    text-align: center;
   }
 }
 
