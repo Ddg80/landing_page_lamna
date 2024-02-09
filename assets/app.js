@@ -1,6 +1,6 @@
 import "./bootstrap.js";
 import "./styles/app.css"; 
-const TAILLE_SCREEN = 600; 
+const TAILLE_SCREEN = 1024; 
 
 const navbarToggle = document.querySelector(".navbar-toggler");
 const navBarNav = document.querySelector(".navbar-nav");
