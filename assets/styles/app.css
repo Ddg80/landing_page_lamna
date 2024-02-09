@@ -15,6 +15,35 @@
   --main-pink-light: #fef8;
   --main-yellow-color: #fda727;
   --main-grey-color: #c2c2c2;
+  --desktop-font-h1: 38px;
+  --desktop-font-h2: 28px;
+  --desktop-font-h3: 24px;
+  --desktop-font-h4: 22px;
+  --desktop-font-p: 16px;
+  --mobile-font-h1: 24px;
+  --mobile-font-h2: 22px;
+  --mobile-font-h3: 18px;
+  --mobile-font-h4: 16px;
+  --mobile-font-p: 16px;
+}
+
+
+h1 {
+  font-size: var(--desktop-font-h1)!important;
+}
+h2{
+  font-size: var(--desktop-font-h2)!important;
+}
+h3 {
+  font-size: var(--desktop-font-h3)!important;
+}
+h4{
+  font-size: var(--desktop-font-h4)!important;
+}
+
+p{
+  font-size: var(--desktop-font-p);
+  font-family: 'Inter-Regular'!important;
 }
 
 html {
@@ -41,9 +70,6 @@ html {
   color: var(--main-white-color);
 }
 
-.font-size-choices {
-  font-size: 22px;
-}
 
 @media screen and (max-width: 768px) {
   .font-size-choices {
@@ -66,10 +92,6 @@ html {
   border-radius: 10px;
 }
 
-.list-number {
-  font-size: 18px;
-}
-
 .concept {
   max-width: max-content;
   padding: 0.1em 0.5em;
@@ -86,7 +108,6 @@ html {
 .header-percentage {
   color: var(--text-green-color);
   font-weight: 500;
-  font-size: 2em;
 }
 
 .card {
@@ -275,7 +296,6 @@ body {
   color: var(--secondary-green-color);
   text-align: center;
   font-family: "ClashDisplay-Variable";
-  font-size: 38px;
   font-style: normal;
   font-weight: 500;
   line-height: 48px;
@@ -289,7 +309,6 @@ body {
   color: var(--secondary-black-color);
   text-align: center;
   font-family: "ClashDisplay-Variable";
-  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
@@ -370,7 +389,6 @@ body {
 }
 
 .date-card-article {
-  font-size: 12px;
   margin-left: 10px;
 }
 
@@ -381,12 +399,8 @@ body {
 .title-concepts-desktop {
   color: var(--secondary-green-color);
   font-weight: 600;
-  font-size: 22px;
 }
 
-.description-article-desktop {
-  font-size: 20px;
-}
 
 /*_________________________________________ NEWSLETTER____________________________________________ */
 .image-newsletter {
@@ -405,7 +419,6 @@ body {
 }
 
 .box-links-newsletter p {
-  font-size: 20px;
   color: var(--main-green-color);
 }
 
@@ -521,7 +534,6 @@ body {
 .title-filters {
   color: var(--main-black-color);
   text-align: center;
-  font-size: 14px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -602,7 +614,6 @@ body {
   color: var(--main-yellow-color);
   border: 1px solid var(--main-yellow-color);
   border-radius: 50px;
-  font-size: 16px;
 }
 
 .text-section-blog-details{
@@ -614,7 +625,6 @@ body {
 }
 
 .date-card-article-blog-details {
-  font-size: 16px;
   margin-left: 10px;
 }
 
@@ -632,9 +642,10 @@ body {
   font-weight: 500;
 }
 
-.description-blog-details {
-  font-size: 18px;
+.title-header-blog-details h1 {
+  word-wrap: break-word;
 }
+
 
 .content-header-blog-details {
   width: 40%;
@@ -660,14 +671,12 @@ body {
 }
 .title-paragraph {
   color: var(--main-green-color);
-  font-size: 22px;
   font-weight: 500;
   margin-bottom: 16px;
 }
 
 .content-paragraph {
   color: var(--main-black-color);
-  font-size: 22px;
   font-weight: 500;
   margin-top: 16px;
   margin-bottom: 16px;
@@ -730,20 +739,20 @@ figcaption{
 @media screen and (max-width: 1024px) {
 
   h1 {
-    font-size: 24px!important;
+    font-size: var(--desktop-font-h1)!important;
   }
   h2{
-    font-size: 22px!important;
+    font-size: var(--desktop-font-h2)!important;
   }
   h3 {
-    font-size: 18px!important;
+    font-size: var(--desktop-font-h3)!important;
   }
   h4{
-    font-size: 16px!important;
+    font-size: var(--desktop-font-h4)!important;
   }
-
+  
   p{
-    font-size: 16px!important;
+    font-size: var(--desktop-font-p);
     font-family: 'Inter-Regular'!important;
   }
 
