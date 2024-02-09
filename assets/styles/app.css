@@ -712,6 +712,19 @@ figcaption{
     flex-direction: column;
     padding: 20px;
   }
+
+  .block-image-header-blog-details{
+    text-align: center;
+  }
+
+  .title-header-blog-details h1 {
+    width: 80vw;
+    word-wrap: break-word;
+  }
+
+  .description-blog-details > div{
+    width: 80vw;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -818,6 +831,11 @@ figcaption{
   .content-header-blog-details {
     width: 100%;
     padding: 10px;
+  }
+
+  .title-header-blog-details h1 {
+    width: 100%;
+    word-wrap: break-word;
   }
 
   .title-blog-details {
