@@ -851,9 +851,9 @@ footer {
     
   }
 
-  .card-image img, figure img{
+  figure img{
     height: auto;
-    width: 95%;
+    width: 100%;
   }
 
   .navbarText-mobile {
