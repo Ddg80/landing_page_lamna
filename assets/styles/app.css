@@ -851,6 +851,11 @@ footer {
     
   }
 
+  .card-image img, figure img{
+    height: auto;
+    width: 95%;
+  }
+
   .navbarText-mobile {
     width: 100%;
     display: flex;
