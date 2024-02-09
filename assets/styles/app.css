@@ -711,6 +711,71 @@ figcaption{
 }
 
 
+.rights{  
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin: 20px auto;
+}
+
+.rights h2, h3, h1, h4{
+  margin: 10px 0;
+}
+
+
+/* SHOP SECTION */
+
+#section-shop{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.shop-block{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: var(--tertiary-green-color);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 40px 0 100px 0;
+}
+
+.shop-image{
+  width: 40%;
+}
+
+.shop-image img{
+  width: 100%;
+}
+
+.shop-content {
+  width: 50%;
+}
+
+.not-found{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
+
+
 
 /* ------------------------- MOBILE --------------------------- */
 
@@ -762,6 +827,7 @@ figcaption{
     justify-content: center;
   }
   
+
   .navbarText-mobile {
     width: 100%;
     display: flex;
@@ -954,72 +1020,14 @@ figcaption{
   }
 
   .shop-block{
+    display: flex;
     flex-direction: column;
+    justify-content: center;
   }
 
+  .shop-content{
+    width: 100%;
+  }
 }
 
 
-.rights{  
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  margin: 20px auto;
-}
-
-.rights h2, h3, h1, h4{
-  margin: 10px 0;
-}
-
-
-/* SHOP SECTION */
-
-#section-shop{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.shop-block{
-  width: 80%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  background-color: var(--tertiary-green-color);
-  border-radius: 15px;
-  padding: 20px;
-  margin: 40px 0 100px 0;
-}
-
-.shop-image{
-  width: 40%;
-}
-
-.shop-image img{
-  width: 100%;
-}
-
-.shop-content {
-  width: 50%;
-}
-
-.not-found{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 150px;
-}
-
-
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-footer {
-  margin-top: auto;
-}
