@@ -1,5 +1,6 @@
 import "./bootstrap.js";
-import "./styles/app.css";  
+import "./styles/app.css"; 
+const TAILLE_SCREEN = 600; 
 
 const navbarToggle = document.querySelector(".navbar-toggler");
 const navBarNav = document.querySelector(".navbar-nav");
@@ -26,7 +27,7 @@ const progressiveContent = document.getElementById(
   "section-progressive-content"
 );
 
-if (window.innerWidth < 900) {
+if (window.innerWidth < TAILLE_SCREEN) {
   if (screenDesktop !== null) {
     screenDesktop.style.display = "none";
   }
@@ -69,7 +70,7 @@ if (window.innerWidth < 900) {
 window.addEventListener("resize", function () {
   let win = this;
   console.log(win.innerWidth);
-  if (win.innerWidth < 900) {
+  if (win.innerWidth < TAILLE_SCREEN) {
 
     if (screenDesktop !== null) {
       screenDesktop.style.display = "none";
