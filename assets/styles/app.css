@@ -705,6 +705,15 @@ figcaption{
 
 /* ------------------------- MOBILE --------------------------- */
 
+@media screen and (max-width: 1616px) {
+  .container-header-blog-details {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
 @media screen and (max-width: 900px) {
   /* Navigation */
   .links-networks {
@@ -806,12 +815,6 @@ figcaption{
     align-items: center;
   }
 
-  .container-header-blog-details {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-  }
   .content-header-blog-details {
     width: 100%;
     padding: 10px;
